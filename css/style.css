@@ -1,31 +1,24 @@
-
-.wrapper {
-    font-family: 'Abril Fatface', cursive;
-    width: 1000px;
-    margin: 0 auto;
-}
+@charset "UTF-8";
 
 header {
     width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: burlywood;
+    margin: 30px auto;
 }
 
-header h1 {
-    margin-right: auto;
+.wrapper {
+    font-family: 'Abril Fatface', cursive;
+    margin: 0 auto;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 header a {
     text-decoration: none;
     color: black;
     font-size: 60px;
-}
-
-header .wrapper {
-    padding: 30px ;
-    margin-left: auto;
 }
 
 .home {
@@ -35,7 +28,8 @@ header .wrapper {
 .sns-list {
     padding-right: 50px;
     list-style: none;
-    display: flex;
+    display: flex;;
+    margin: auto 0;
 }
 
 .sns-list li {
@@ -44,6 +38,11 @@ header .wrapper {
 
 .sns-icon {
     font-size: 2em;
+}
+
+.container .wrapper {
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .main-image {
@@ -62,7 +61,7 @@ header .wrapper {
 }
 
 .main-body img {
-    width: 400px;
+    width: 300px;
     margin-right: 70px;
     border-radius: 50%;
 }
@@ -84,4 +83,34 @@ footer p {
     color: white;
     text-align: center ;
     padding: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+    header .wrapper, .main-body {
+        flex-direction: column;
+    }
+
+    header , .container .wrapper {
+        width: 100%;
+    }
+
+    header a {
+        text-align: center;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .sns-list {
+        margin: 30px 0 auto auto;
+    }
+
+    .main-body img {
+        margin: 0 auto;
+    }
+
+    .main-body p {
+        padding: 30px 30px 0 30px;
+    }
 }
